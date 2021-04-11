@@ -1,24 +1,22 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## usersテーブル
+|  Column              |  Type     |  Option                     |
+|  ------------------  |  -------  |  -------------------------  |
+|  nickname            |  string   |  null: false                |
+|  email               |  string   |  null: false, unique: true  |
+|  encrypted_password  |  string   |  null: false                |
 
-Things you may want to cover:
+### Association
+- has_many :tweets
 
-* Ruby version
 
-* System dependencies
+## tweetsテーブル
+|  Column              |  Type        |  Option                     |
+|  ------------------  |  ----------  |  -------------------------  |
+|  title               |  string      |  null: false                |
+|  text                |  text        |  null: false                |
+|  user                |  references  |  foreign_key: true          |
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+- belongs_to :user
