@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: random_gohan_app_production
-  username: random_gohan_app
-  password: <%= ENV['RANDOM_GOHAN_APP_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
