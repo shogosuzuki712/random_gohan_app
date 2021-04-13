@@ -37,7 +37,7 @@ a {
 /* ヘッダー */
 
 .header {
-  background-color: #DDDDDD;
+  background-color: #fca17e;
   margin-bottom: 48px;
   padding: 20px 0;
 
@@ -58,16 +58,17 @@ a {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #2d6e96;
+  color: rgb(51, 50, 50);
   text-decoration: none;
   user-select: none;
-  border: 1px #2d6e96 solid;
+  border: 1px rgb(255, 255, 255) solid;
+  background: rgb(252, 252, 252);
   border-radius: 3px;
   transition: 0.4s ease;
 }
 .nav__btn:hover{
-  color: #fff;
-  background: #2d6e96;
+  color: rgb(0, 0, 0);
+  background: rgb(223, 222, 222);
 }
 
 .nav__logout{
@@ -81,6 +82,7 @@ a {
 .nav__logout:hover{
   opacity: 0.5;
 }
+
 
 /* フォーム周り */
 .form__wrapper{
