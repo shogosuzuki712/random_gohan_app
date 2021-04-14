@@ -12,6 +12,12 @@ RSpec.describe User, type: :model do
       it '全ての情報が正しければ登録できる' do
         expect(@user).to be_valid
       end
+
+      it 'パスワードが6文字以上なら登録できる' do
+        @user.password = 'aiu123'
+        @user.password_confirmation = 'aiu123'
+        expect(@user).to be_valid
+      end
     end
 
     context '新規登録できないとき' do
