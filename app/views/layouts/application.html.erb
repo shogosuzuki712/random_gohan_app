@@ -19,8 +19,9 @@
           </div>
             <% if user_signed_in? %>
               <div class="nav__right">
+                <%= link_to "シェア", new_tweet_path, class: :nav__btn %>
+                <%= link_to "マイページ", root_path,  class: :nav__btn %>
                 <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-                <%= link_to "New Proto", new_tweet_path, class: :nav__btn %>
               </div>
             <%else%>
               <div class="nav__right">

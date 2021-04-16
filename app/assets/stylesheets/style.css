@@ -75,13 +75,21 @@ a {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87CEFA;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   user-select: none;
+  border: 1px rgb(255, 255, 255) solid;
+  background: rgb(252, 252, 252);
+  border-radius: 3px;
+  transition: 0.4s ease;
 }
 .nav__logout:hover{
+  color: rgb(0, 0, 0);
+  background: rgb(223, 222, 222);
   opacity: 0.5;
 }
+
+
 
 
 /* フォーム周り */
