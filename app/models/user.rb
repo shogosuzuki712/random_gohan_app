@@ -8,4 +8,6 @@ class User < ApplicationRecord
   validates_format_of :password, with: PASSWORD_REGEX
   
   validates :name, presence: true
+
+  has_many :tweets
 end
