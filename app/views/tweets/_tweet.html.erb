@@ -1,14 +1,16 @@
 <div class="card">
-  <div class="menu">
-    <div class="menu-title">▼</div>
-    <div class="sub-menu">
-      <ul class="my-lists">
-        <li><%= link_to '編集', edit_tweet_path(tweet.id), method: :get %></li>
-        <li><%= link_to '削除', tweet_path(tweet.id), method: :delete, data: { confirm: "【確認】投稿を削除してもよろしいですか？" } %></li>
-      </ul>
+  <% if user_signed_in? && current_user.id == tweet.user.id%>
+    <div class="menu">
+      <div class="menu-title">▼</div>
+      <div class="sub-menu">
+        <ul class="my-lists">
+          <li><%= link_to '編集', edit_tweet_path(tweet.id), method: :get %></li>
+          <li><%= link_to '削除', tweet_path(tweet.id), method: :delete, data: { confirm: "【確認】投稿を削除してもよろしいですか？" } %></li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <%= image_tag(tweet.image, class: :card__img)%>
+  <%end%>
+  <%= link_to image_tag(tweet.image, class: :card__img),user_path(tweet.user.id)%>
     <p class="card__summary"><%= tweet.title%></p>
     <p class="card__summary"><%= tweet.text %></p>
 </div>

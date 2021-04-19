@@ -2,7 +2,7 @@ class TweetsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-  
+    @tweet = Tweet.all.order("created_at DESC")
   end
 
   def new
@@ -11,7 +11,9 @@ class TweetsController < ApplicationController
   
   def create
     @tweet = Tweet.new(tweet_params)
-    unless @tweet.save
+    if @tweet.save
+      redirect_to root_path
+    else
       render :new
     end
   end
