@@ -34,6 +34,10 @@ class TweetsController < ApplicationController
     @tweet.destroy
   end
 
+  def search
+    @tweet = Tweet.where( 'id >= ?', rand(Tweet.first.id..Tweet.last.id) ).first
+  end
+
   private
 
   def tweet_params
