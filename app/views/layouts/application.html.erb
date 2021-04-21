@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ANY GOHANS</title>
+    <title>Anyeater</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -14,27 +14,26 @@
     <header class="header">
       <div class="inner">
         <div class="nav">
+
           <div class="nav__left">
             <%= link_to image_tag("ANY GOHANS.png", class: :logo), root_path %>
           </div>
+
+          <div class="nav__right">
             <% if user_signed_in? %>
-              <div class="nav__right">
-                <%= link_to "検索",  search_tweet_path(current_user.id), class: :nav__btn %>
-                <%= link_to "シェア", new_tweet_path, class: :nav__btn %>
-                <%= link_to "マイページ", user_path(current_user.id),  class: :nav__btn %>
-                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-              </div>
+              <%= link_to "検索", search_tweet_path(current_user.id), class: :nav__btn %>
+              <%= link_to "シェア", new_tweet_path, class: :nav__btn %>
+              <%= link_to "マイページ", user_path(current_user.id),  class: :nav__btn %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
             <%else%>
-              <div class="nav__right">
-                <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
-                <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
-              </div>
+              <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
+              <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
             <%end%>
+          </div>
+
         </div>
       </div>
     </header>
-    <div>
-    </div>
     <%= yield %>
     <footer class="footer">
       <p class="copyright">Copyright © PROTO SPACE All rights reserved.</p>
