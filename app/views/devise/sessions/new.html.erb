@@ -1,7 +1,7 @@
 <div class="main">
   <div class="inner">
     <div class="form__wrapper">
-      <h2 class="page-heading">ユーザーログイン</h2>
+      <h2 class="page-heading">ログイン</h2>
       <%= form_with model: @user, url: user_session_path, local: true do |f| %>
          <div class='login-flash-message'>
             <%= flash[:notice] %>
@@ -14,8 +14,8 @@
         </div>
 
         <div class="field">
-          <%= f.label :password,"パスワード（6文字以上）" %><br />
-          <%= f.password_field :password,id:"user_password", autocomplete: "current-password" %>
+          <%= f.label :password,"パスワード" %><br />
+          <%= f.password_field :password, id:"user_password", placeholder:"6文字以上の半角英数字", autocomplete: "current-password" %>
         </div>
 
         <div class="actions">
