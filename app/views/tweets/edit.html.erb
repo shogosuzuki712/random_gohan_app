@@ -1,9 +1,9 @@
 <div class="main">
   <div class="inner">
     <div class="form__wrapper">
-      <h2 class="page-heading">編集する（仮）</h2>
-      <%= form_with model: @tweet,local: true do |f| %>
-      <%= render "shared/error_messages", model: f.object %>
+      <h2 class="page-heading">編集する</h2>
+      <%= form_with model: @tweet, local: true do |f| %>
+        <%= render "shared/error_messages", model: f.object %>
       <%end%>
       <%= render "form" %>
     </div>
