@@ -37,6 +37,18 @@ RSpec.describe Tweet, type: :model do
         @tweet.valid?
         expect(@tweet.errors.full_messages).to include "User must exist"
       end
+
+      it 'titleが30文字以上だと投稿できない' do
+        @tweet.title = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' #31文字
+        @tweet.valid?
+        expect(@tweet.errors.full_messages).to include "Title is too long (maximum is 30 characters)"
+      end
+
+      it 'textが140文字以上だと投稿できない' do
+        @tweet.text = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' #141文字
+        @tweet.valid?
+        expect(@tweet.errors.full_messages).to include "Text is too long (maximum is 140 characters)"
+      end
     end
   end
 end
