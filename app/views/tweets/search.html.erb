@@ -1,10 +1,10 @@
 <div class="main">
   <div class="inner">
     <div class="form__wrapper">
-      <h2 class="page-heading">検索結果（仮）</h2>
+      <h2 class="page-heading">これに決めた！</h2>
+        <p class="card__summary">ごはんの名前：<%= @tweet.title%></p>
         <%= link_to image_tag(@tweet.image, class: :card__img),user_path(@tweet.user.id)%>
-        <p class="card__summary"><%= @tweet.title%></p>
-        <p class="card__summary"><%= @tweet.text%></p>
+        <p class="card__summary">ごはんの感想：<%= @tweet.text%></p>
     </div>
   </div>
 </div>
