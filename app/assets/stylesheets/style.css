@@ -17,7 +17,7 @@ div {
 
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
-  color: #3b4043;
+  color: #44281e;
 }
 
 li {
@@ -37,10 +37,9 @@ a {
 /* ヘッダー */
 
 .header {
-  background-color: #fca17e;
-  margin-bottom: 48px;
+  background-color: #bf8188;
+  margin-bottom: 15px;
   padding: 20px 0;
-
 }
 .inner {
   width: 1024px;
@@ -52,41 +51,39 @@ a {
   justify-content: space-between;
 }
 .logo {
-  width: 200px;
+  width: 250px;
 }
 .nav__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: rgb(51, 50, 50);
+  color: #fff;
   text-decoration: none;
   user-select: none;
-  border: 1px rgb(255, 255, 255) solid;
-  background: rgb(252, 252, 252);
-  border-radius: 3px;
+  border: 1px #daa964 solid;
+  background: #daa964;
+  border-radius: 15px;
   transition: 0.4s ease;
 }
 .nav__btn:hover{
-  color: rgb(0, 0, 0);
-  background: rgb(223, 222, 222);
+  box-shadow: 3px 6px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
 .nav__logout{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: rgb(0, 0, 0);
+  color: #fff;
   text-decoration: none;
   user-select: none;
-  border: 1px rgb(255, 255, 255) solid;
-  background: rgb(252, 252, 252);
-  border-radius: 3px;
+  border: 1px #a64456 solid;
+  background: #a64456;
+  border-radius: 15px;
   transition: 0.4s ease;
 }
 .nav__logout:hover{
-  color: rgb(0, 0, 0);
-  background: rgb(223, 222, 222);
-  opacity: 0.5;
+  box-shadow: 3px 6px 6px 0 rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
 }
 
 
@@ -98,15 +95,15 @@ a {
 }
 
 .form__text {
-  width: 50%;
+  width: 30%;
 }
 
 .field{
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .actions{
-  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 .form__btn{
@@ -116,15 +113,14 @@ a {
   color: #fff;
   text-decoration: none;
   user-select: none;
-  background: #87CEFA;
-  border: 1px #87CEFA solid;
-  border-radius: 3px;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  background: #daa964;
+  border: 1px #daa964 solid;
+  border-radius: 15px;
   transition: 0.2s ease;
 }
 
 .form__btn:hover {
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 3px 6px 6px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
@@ -133,12 +129,9 @@ a {
 .greeting{
   margin-bottom: 20px;
 }
-.greeting__link{
-  text-decoration: underline;
-}
 .page-heading {
   font-size: 30px;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 .card__wrapper {
   display: flex;
@@ -152,47 +145,43 @@ a {
   margin-bottom: 40px;
   position: relative;
 }
-.card__title {
-  display: block;
-  font-size: 20px;
-  margin-bottom: 8px;
-  font-weight: bold;
+.card__img {
+  margin-bottom: 10px;
 }
 .card__summary {
-  font-size: 16px;
+  font-size: 18px;
 }
-.card__user {
+
+/* menuボタン */
+
+.menu {
+  width: 30px;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  background-color: #bf8188;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.sub-menu {
+  display: none;
+}
+a {
+  color: #fff;
+}
+.my-lists:hover{
+  opacity: 0.8;
+}
+.menu:hover .sub-menu {
+  width: 50px;
+  background-color: #bf8188;
+  border-radius: 15px;
   display: block;
-  font-size: 12px;
-  color: #999;
-  text-align: right;
-  text-decoration: underline;
 }
 
 /* ユーザーページ */
 .user__wrapper{
   min-height: calc(100vh - 161px);
-}
-.table{
-  border-collapse: collapse;
-  margin-bottom: 32px;
-  width: 50%;
-}
-.table__col1{
-  text-align: left;
-  font-weight: bold;
-  background: #fafafa;
-  border-collapse: collapse;
-  border: 1px solid #f5f5f5;
-  width: 30%;
-  padding: 8px;
-}
-.table__col2{
-  text-align: left;
-  border: 1px solid #f5f5f5;
-  border-collapse: collapse;
-  width: 70%;
-  padding: 16px 8px;
 }
 .user__card {
   display: flex;
@@ -203,8 +192,9 @@ a {
 /* フッター */
 
 .footer {
-  background-color: #999;
-  padding: 10px 0;
+  background-color: #44281e;
+  margin-top: 15px;
+  padding: 25px 0;
 }
 .copyright {
   text-align: center;
@@ -225,15 +215,12 @@ a {
     width: 48%;
     margin-bottom: 40px;
   }
-  .prototype_image{
-    width: 60%;
-  }
 }
 
  /* スマホ表示 */
 @media (max-width: 599px) {
   .logo {
-    width: 120px;
+    width: 200px;
   }
   .page-heading {
     font-size: 20px;
@@ -246,43 +233,6 @@ a {
     font-size: 18px;
   }
   .card__summary {
-    font-size: 14px;
+    font-size: 18px;
   }
-  .prototype_image{
-    width: 100%;
-  }
-  .table{
-    width: 100%;
-  }
-}
-
-.menu {
-  width: 100px;
-  text-align: center;
-  color: gray;
-  position: absolute;
-}
-
-.sub-menu {
-  display: none;
-}
-
-li{
-  border: gray;
-}
-
-ul.my-lists:hover{
-  width: 100px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: grey;
-}
-
-.menu:hover .sub-menu {
-  display: block;
 }
