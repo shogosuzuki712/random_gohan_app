@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anyeater</title>
+    <title>NaniiTa</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -16,12 +16,12 @@
         <div class="nav">
 
           <div class="nav__left">
-            <%= link_to image_tag("ANY GOHANS.png", class: :logo), root_path %>
+            <%= link_to image_tag("top.png", class: :logo), root_path %>
           </div>
 
           <div class="nav__right">
             <% if user_signed_in? %>
-              <%= link_to "検索", search_tweet_path(current_user.id), class: :nav__btn %>
+              <%= link_to "決める", search_tweet_path(current_user.id), class: :nav__btn %>
               <%= link_to "シェア", new_tweet_path, class: :nav__btn %>
               <%= link_to "マイページ", user_path(current_user.id),  class: :nav__btn %>
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
