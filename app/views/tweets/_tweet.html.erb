@@ -1,11 +1,11 @@
 <div class="card">
   <% if user_signed_in? && current_user.id == tweet.user.id%>
     <div class="menu">
-      <div class="menu-title">▼</div>
+      <div class="menu-title">≡</div>
       <div class="sub-menu">
-        <ul class="my-lists">
-          <li><%= link_to '編集', edit_tweet_path(tweet.id), method: :get %></li>
-          <li><%= link_to '削除', tweet_path(tweet.id), method: :delete, data: { confirm: "【確認】投稿を削除してもよろしいですか？" } %></li>
+        <ul>
+          <li class=my-lists><%= link_to '編集', edit_tweet_path(tweet.id), method: :get %></li>
+          <li class=my-lists><%= link_to '削除', tweet_path(tweet.id), method: :delete, data: { confirm: "【確認】投稿を削除してもよろしいですか？" } %></li>
         </ul>
       </div>
     </div>
