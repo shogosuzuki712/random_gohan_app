@@ -1,11 +1,11 @@
 <main class="main">
   <div class="inner">
-      <div class="card__wrapper">
-      <% if user_signed_in?%>
-        <%=render partial: "tweet", collection: @tweet%>
+    <div class="card__wrapper">
+      <%if user_signed_in?%>
+        <%= render partial: "tweet", collection: @tweet%>
       <%else%>
         <%= image_tag 'gohan9.png' %>
       <%end%>
-      </div>
+    </div>
   </div>
 </main>
