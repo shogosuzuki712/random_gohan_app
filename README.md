@@ -95,8 +95,7 @@ Password: satou5tarou
 
 - 編集ページ
 
-[![Image from Gyazo](https://i.gyazo.com/9bee7a2980bdb449edc4f63a4ec06439.gif)](https://gyazo.com/9bee7a2980bdb449edc4f63a4ec06439)
-
+![Image from Gyazo](https://i.gyazo.com/9bee7a2980bdb449edc4f63a4ec06439.gif)
 --- 
 ## 削除機能
 
