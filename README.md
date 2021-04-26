@@ -95,7 +95,8 @@ Password: satou5tarou
 
 - 編集ページ
 
-![Image from Gyazo](https://i.gyazo.com/9bee7a2980bdb449edc4f63a4ec06439.gif)
+[![Image from Gyazo](https://i.gyazo.com/9bee7a2980bdb449edc4f63a4ec06439.gif)](https://gyazo.com/9bee7a2980bdb449edc4f63a4ec06439)
+
 --- 
 ## 削除機能
 
@@ -108,6 +109,8 @@ Password: satou5tarou
 - 検索ページ
 
 [![Image from Gyazo](https://i.gyazo.com/8cd44549b714158eb02bcd8490774b35.gif)](https://gyazo.com/8cd44549b714158eb02bcd8490774b35)
+
+[![Image from Gyazo](https://i.gyazo.com/341ccc7739fdadcf708ccc82535aa77e.gif)](https://gyazo.com/341ccc7739fdadcf708ccc82535aa77e)
 
 
 # 工夫したポイント
