@@ -102,13 +102,13 @@ Password: satou5tarou
 
 - 削除ページ
 
-[![Image from Gyazo](https://i.gyazo.com/77432ba4bbf76413a5dd8cdbb49af167.gif)](https://gyazo.com/77432ba4bbf76413a5dd8cdbb49af167)
+[![Image from Gyazo](https://i.gyazo.com/dda3b0fd48c523208c5cd2dd33bf292b.gif)](https://gyazo.com/dda3b0fd48c523208c5cd2dd33bf292b)
 
 ---
 ## 検索機能
 - 検索ページ
 
-[![Image from Gyazo](https://i.gyazo.com/8cd44549b714158eb02bcd8490774b35.gif)](https://gyazo.com/8cd44549b714158eb02bcd8490774b35)
+[![Image from Gyazo](https://i.gyazo.com/800672553c90860c24e5727d37d0a6ce.gif)](https://gyazo.com/800672553c90860c24e5727d37d0a6ce)
 
 # 工夫したポイント
 
