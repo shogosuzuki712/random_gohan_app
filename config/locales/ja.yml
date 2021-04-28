@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: ニックネーム
+        email: メールアドレス
+        password: パスワード
+      tweet:
+        image: ごはんの写真
+        title: ごはんの名前
+        text:  ごはんの感想
