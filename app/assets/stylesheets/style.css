@@ -125,7 +125,6 @@ a {
 }
 
 /* メイン */
-
 .greeting{
   margin-bottom: 20px;
 }
@@ -153,31 +152,66 @@ a {
 }
 
 /* menuボタン */
-
 .menu {
-  width: 30px;
-  text-align: center;
-  color: #fff;
+  width: 45px;
   position: absolute;
   background-color: #bf8188;
-  border-radius: 15px;
+}
+/* label */
+.accordion-trigger {
+  text-align: center;
   cursor: pointer;
-}
-.sub-menu {
-  display: none;
-}
-a {
-  color: #fff;
-}
-.my-lists:hover{
-  opacity: 0.8;
-}
-.menu:hover .sub-menu {
-  width: 50px;
-  background-color: #bf8188;
-  border-radius: 15px;
   display: block;
+  padding: 10px;
+  background-color: #bf8188;
+  position: relative;
 }
+
+/* icon */
+.accordion-trigger::before,
+.accordion-trigger::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 15px;
+  margin: auto;
+  height: 2px;
+  width: 12px;
+  background-color: #fff;
+  transition: all .1s ease-out;
+}
+.accordion-trigger::after {
+  transform: rotate(90deg);
+}
+.accordion-trigger.is-opened::after {
+  opacity: 0;
+  transform: rotate(0);
+}
+
+/* target */
+.accordion-target { 
+  box-sizing: border-box;
+  overflow: hidden;
+  height: 0;
+  transition: height .1s ease-out;
+  text-align: center;
+}
+
+/* target-child */
+.accordion-target.list > .list__item {
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.accordion-target.list > .list__item > a {
+  display: block;
+  margin-top: -15px;
+  margin-bottom: -15px;
+  color: #fff;
+  text-decoration: none;
+}
+/* menuボタン */
 
 /* ユーザーページ */
 .user__wrapper{
@@ -189,8 +223,8 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-/* フッター */
 
+/* フッター */
 .footer {
   background-color: #44281e;
   margin-top: 15px;
@@ -238,7 +272,6 @@ a {
 }
 
 /* フェードイン */
-
 .fadein {
   opacity : 0;
   transform: translateY(24px);

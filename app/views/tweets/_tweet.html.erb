@@ -1,13 +1,11 @@
 <div class="fadein card">
   <% if user_signed_in? && current_user.id == tweet.user.id%>
     <div class="menu">
-      <div class="menu-title">≡</div>
-      <div class="sub-menu">
-        <ul>
-          <li class=my-lists><%= link_to '編集', edit_tweet_path(tweet.id), method: :get %></li>
-          <li class=my-lists><%= link_to '削除', tweet_path(tweet.id), method: :delete, data: { confirm: "【確認】投稿を削除してもよろしいですか？" } %></li>
+      <span class="accordion-trigger js-accordion-trigger"></span>
+        <ul class="accordion-target list js-accordion-target">
+          <li class="list__item"><%= link_to '編集', edit_tweet_path(tweet.id), method: :get %></li>
+          <li class="list__item"><%= link_to '削除', tweet_path(tweet.id), method: :delete, data: { confirm: "【確認】投稿を削除してもよろしいですか？" } %></li>
         </ul>
-      </div>
     </div>
   <%end%>
   <%= link_to image_tag(tweet.image, class: :card__img),user_path(tweet.user.id)%>
