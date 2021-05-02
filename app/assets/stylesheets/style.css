@@ -63,6 +63,7 @@ a {
   border: 1px #daa964 solid;
   background: #daa964;
   border-radius: 15px;
+  margin-bottom: 3px;
   transition: 0.4s ease;
 }
 .nav__btn:hover{
