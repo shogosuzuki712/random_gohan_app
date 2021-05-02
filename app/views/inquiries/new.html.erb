@@ -1,0 +1,26 @@
+<div class="main">
+  <div class="inner">
+    <div class="form__wrapper">
+      <h2 class="page-heading">お問い合わせ内容</h2>
+      <p>ニックネームは空欄でも送信いただけます。</p>
+      <p>お客様から頂いたお問い合わせを元に、サービスの向上に努めて参ります。</p><br/>
+
+      <%= form_with model: @inquiry, local: true do |f| %>
+        <%= render "shared/error_messages", model: f.object %>
+        <div class="field">
+          <%= f.label :name, "ニックネーム"%><br/>
+          <%= f.text_field :name%><br/>
+        </div>
+
+        <div class="field">
+          <%= f.label :message, "お問い合わせ内容"%><br/>
+          <%= f.text_area :message, class: :form__text%><br/>
+        </div>
+
+        <div class ="actions">
+          <%= f.submit "送信", class: :form__btn%>
+        </div>
+      <%end%>
+    </div>
+  </div>
+</div>
