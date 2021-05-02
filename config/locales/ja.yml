@@ -9,3 +9,6 @@ ja:
         image: ごはんの写真
         title: ごはんの名前
         text:  ごはんの感想
+      inquiry:
+        name: ニックネーム
+        message: お問い合わせ内容
