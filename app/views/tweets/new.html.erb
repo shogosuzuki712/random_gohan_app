@@ -1,11 +1,13 @@
 <div class="main">
   <div class="inner">
     <div class="form__wrapper">
+    <div class="form_area">
       <h2 class="page-heading">ごはんをシェアしよう！</h2>
       <%= form_with model: @tweet, local: true do |f| %>
         <%= render "shared/error_messages", model: f.object %>
       <%end%>
       <%= render "form" %>
+    </div>
     </div>
   </div>
 </div>

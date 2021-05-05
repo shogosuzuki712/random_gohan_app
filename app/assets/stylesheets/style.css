@@ -87,16 +87,19 @@ a {
   opacity: 0.8;
 }
 
-
-
-
 /* フォーム周り */
-.form__wrapper{
+.form__wrapper {
   min-height: calc(100vh - 161px);
+  display: flex;
+  justify-content: center;
+}
+.form_area {
+  text-align:center;
 }
 
 .form__text {
-  width: 30%;
+  width: 90%;
+  height: 100px;
 }
 
 .field{
