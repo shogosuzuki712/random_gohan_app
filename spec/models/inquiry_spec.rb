@@ -14,15 +14,15 @@ RSpec.describe Inquiry, type: :model do
     end
 
     context 'フォーム送信できないとき' do
-      it 'ニックネームが空だと送信できない'do
+      it 'ニックネームが空だと送信できない' do
         @inquiry.name = ''
         @inquiry.valid?
-        expect(@inquiry.errors.full_messages).to include "ニックネームを入力してください"
+        expect(@inquiry.errors.full_messages).to include 'ニックネームを入力してください'
       end
       it 'お問い合わせ内容が空だと送信できない' do
         @inquiry.message = ''
         @inquiry.valid?
-        expect(@inquiry.errors.full_messages).to include "お問い合わせ内容を入力してください"
+        expect(@inquiry.errors.full_messages).to include 'お問い合わせ内容を入力してください'
       end
     end
   end
