@@ -4,7 +4,7 @@
       <h2 class="page-heading">編集する</h2>
       <%= form_with model: @tweet, local: true do |f| %>
         <%= render "shared/error_messages", model: f.object %>
-      <%end%>
+      <% end %>
       <%= render "form" %>
     </div>
   </div>
