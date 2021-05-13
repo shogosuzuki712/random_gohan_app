@@ -1,22 +1,21 @@
 <%= form_with model: @tweet, local: true do |f| %>
 
   <div class="field">
-    <%= f.label :image, "ごはんの写真"%><br/>
-    <%= f.file_field :image, id:"tweet_image"%>
+    <%= f.label :image, "ごはんの写真" %><br/>
+    <%= f.file_field :image, id:"tweet_image" %>
   </div>
 
   <div class="field">
-    <%= f.label :title, "ごはんの名前"%><br/>
-    <%= f.text_field :title, id:"tweet_title"%>
+    <%= f.label :title, "ごはんの名前" %><br/>
+    <%= f.text_field :title, id:"tweet_title" %>
   </div>
 
   <div class="field">
     <%= f.label :text, "ごはんの感想"%><br/>
-    <%= f.text_area :text, class: :form__text, id:"tweet_text"%>
+    <%= f.text_area :text, class: :form__text, id:"tweet_text" %>
   </div>
 
   <div class="actions">
     <%= f.submit "保存する", class: :form__btn %>
   </div>
-  
 <% end %>

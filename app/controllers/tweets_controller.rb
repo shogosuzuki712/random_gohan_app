@@ -4,13 +4,13 @@ class TweetsController < ApplicationController
   before_action :conditions,         only: [:edit, :update, :destroy]
 
   def index
-    @tweet = Tweet.all.order("created_at DESC")
+    @tweet = Tweet.all.order('created_at DESC')
   end
 
   def new
     @tweet = Tweet.new
   end
-  
+
   def create
     @tweet = Tweet.new(tweet_params)
     if @tweet.save
@@ -22,7 +22,7 @@ class TweetsController < ApplicationController
 
   def edit
   end
-  
+
   def update
     if @tweet.update(tweet_params)
       redirect_to user_path(current_user.id)
@@ -36,7 +36,7 @@ class TweetsController < ApplicationController
   end
 
   def search
-    @tweet = Tweet.where( 'id >= ?', rand(Tweet.first.id..Tweet.last.id) ).first
+    @tweet = Tweet.where('id >= ?', rand(Tweet.first.id..Tweet.last.id)).first
   end
 
   private
@@ -48,7 +48,7 @@ class TweetsController < ApplicationController
   end
 
   def tweet_params
-    params.require(:tweet).permit(:title,:text,:image).merge(user_id: current_user.id)
+    params.require(:tweet).permit(:title, :text, :image).merge(user_id: current_user.id)
   end
 
   def set_tweet

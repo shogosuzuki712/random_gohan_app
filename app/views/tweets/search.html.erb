@@ -1,10 +1,12 @@
 <div class="main">
   <div class="inner">
     <div class="fadein form__wrapper">
-      <h2 class="page-heading">これに決めた！</h2>
-        <p class="card__summary">ごはんの名前：<%= @tweet.title%></p>
-        <p class="card__summary">ごはんの感想：<%= @tweet.text%></p>
-        <%= link_to image_tag(@tweet.image, class: :card__img),user_path(@tweet.user.id)%>
+      <div class="form_area">
+        <h2 class="page-heading">これに決めた！</h2>
+          <p class="card__summary">ごはんの名前：<%= @tweet.title %></p>
+          <p class="card__summary">ごはんの感想：<%= @tweet.text %></p>
+          <%= link_to image_tag(@tweet.image, class: :card__img),user_path(@tweet.user.id) %>
+      </div>
     </div>
   </div>
 </div>
