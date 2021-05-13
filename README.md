@@ -52,6 +52,7 @@ http://54.64.237.128/
 | ユーザー詳細表示機能 | 各ユーザーの投稿一覧を表示 |
 | お問い合わせ機能 | ユーザーの声をGmailで受信可能 |
 <br>
+
 [![Image from Gyazo](https://i.gyazo.com/5d3510e2fc18839c4158d40d0f25e764.png)](https://gyazo.com/5d3510e2fc18839c4158d40d0f25e764)<br>
 <br>
 
