@@ -29,6 +29,7 @@ http://54.64.237.128/
 `②画面右上「シェア」ボタンを押下`<br>
 `③投稿内容を入力して「保存する」ボタン押下`<br>
 `④投稿完了`<br>
+<br>
  [![Image from Gyazo](https://i.gyazo.com/c4a6d9e3488f9015b63ea0d10de59a56.gif)](https://gyazo.com/c4a6d9e3488f9015b63ea0d10de59a56)
 
 ---
@@ -37,6 +38,7 @@ http://54.64.237.128/
 `テストアカウントでログイン`<br>
 `画面右上「決める」ボタン押下`<br>
 `検索結果が表示されます。`<br>
+<br>
 [![Image from Gyazo](https://i.gyazo.com/837ea779aa9b2eabd821a474196da778.gif)](https://gyazo.com/837ea779aa9b2eabd821a474196da778)
 
 ---
@@ -53,7 +55,9 @@ http://54.64.237.128/
 | お問い合わせ機能 | ユーザーの声をGmailで受信可能 |
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/5d3510e2fc18839c4158d40d0f25e764.png)](https://gyazo.com/5d3510e2fc18839c4158d40d0f25e764)<br>
+### Gmail受信BOX
+[![Image from Gyazo](https://i.gyazo.com/5d3510e2fc18839c4158d40d0f25e764.png)](https://gyazo.com/5d3510e2fc18839c4158d40d0f25e764)
+<br>
 <br>
 
 # 制作背景
@@ -117,6 +121,8 @@ RSpec
 
 Visual Studio Code
 
+---
+
 # 実装予定の機能
 
 - CircleCI実装
@@ -153,6 +159,7 @@ Visual Studio Code
 <br>
 <br>
 <br>
+
 # 画面遷移図
 
 [![Image from Gyazo](https://i.gyazo.com/7497b2616a6d8b0aefc53e8fa34508a3.png)](https://gyazo.com/7497b2616a6d8b0aefc53e8fa34508a3)
