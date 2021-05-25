@@ -19,9 +19,7 @@ RSpec.describe 'ユーザーが新規登録', type: :system do
       fill_in 'user_password', with: @user.password
       fill_in 'user_password_confirmation', with: @user.password_confirmation
       # 新規登録ボタンを押すとユーザーモデルのカウントが1上がることを確認する
-      expect{
-        find('input[name="commit"]').click
-      }.to change { User.count }.by(1)
+      expect { find('input[name="commit"]').click }.to change { User.count }.by(1)
       # トップページへ遷移したことを確認する
       expect(current_path).to eq(root_path)
       # 新規登録画面へ遷移するボタンやログインページに遷移するボタンが表示されていないことを確認する
@@ -43,9 +41,7 @@ RSpec.describe 'ユーザーが新規登録', type: :system do
       fill_in 'user_password', with: ''
       fill_in 'user_password_confirmation', with: ''
       # 新規登録ボタンを押してもユーザーモデルのカウントは上がらないことを確認する
-      expect{
-        find('input[name="commit"]').click
-      }.to change { User.count }.by(0)
+      expect { find('input[name="commit"]').click }.to change { User.count }.by(0)
       # 新規登録ページへ戻されることを確認する
       expect(current_path).to eq(user_registration_path)
     end
