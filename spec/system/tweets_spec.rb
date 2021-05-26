@@ -115,14 +115,27 @@ RSpec.describe 'ツイート削除', type: :system do
   context 'ツイート削除ができるとき' do
     it 'ログインしたユーザーは自らが投稿したツイートの削除ができる' do
       # ツイート1を投稿したユーザーでログインする
+      visit new_user_session_path
+      fill_in 'user_email', with: @tweet1.user.email
+      fill_in 'user_password', with: @tweet1.user.password
+      find('input[name="commit"]').click
+      expect(current_path).to eq(root_path)
       # ツイート1に「削除」へのリンクがあることを確認する
-      # 「削除」をクリックすると確認ダイヤログが表示され、削除するとレコードの数が1減ることを確認する
+      expect(find('div[class="menu"]').click).to have_link '削除', href: tweet_path(@tweet1)
+      # 「削除」をクリックすると確認ダイヤログが表示される
+      expect{find_link('削除', href: tweet_path(@tweet1)).click}.to change{Tweet.count}.by(0)
+      # 確認ダイアログの内容を確認する
+      expect(page.driver.browser.switch_to.alert.text).to eq "【確認】投稿を削除してもよろしいですか？"
+      # 確認ダイアログでOKを選択する
+      page.driver.browser.switch_to.alert.accept
       # 削除完了画面に遷移したことを確認する
+      expect(current_path).to eq(tweet_path(@tweet1))
       # 「削除しました」の文字があることを確認する
-      # マイページに遷移する
-      # マイページにはツイート1の内容が存在しないことを確認する（画像）
-      # マイページにはツイート1の内容が存在しないことを確認する（タイトル）
-      # マイページにはツイート1の内容が存在しないことを確認する（テキスト）
+      expect(page).to have_content('削除しました')
+      # マイページに遷移する←ここ課題
+      visit root_path
+      # マイページにはツイート1が存在しないことを確認する
+      expect(page).to have_no_content(@tweet1)
     end
   end
   context 'ツイート削除ができないとき' do
