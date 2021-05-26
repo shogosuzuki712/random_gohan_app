@@ -141,11 +141,20 @@ RSpec.describe 'ツイート削除', type: :system do
   context 'ツイート削除ができないとき' do
     it 'ログインしたユーザーは自分以外が投稿したツイートの削除ができない' do
       # ツイート1を投稿したユーザーでログインする
+      visit new_user_session_path
+      fill_in 'user_email', with: @tweet1.user.email
+      fill_in 'user_password', with: @tweet1.user.password
+      find('input[name="commit"]').click
+      expect(current_path).to eq(root_path)
       # ツイート2に「削除」へのリンクがないことを確認する
+      expect(find('div[class="menu"]').click).to have_no_link '削除', href: tweet_path(@tweet2)
     end
     it 'ログインしていないとツイートの削除ボタンがない' do
       # トップページに移動する
+      visit root_path
       # トップページに投稿したツイートが表示されていないことを確認する
+      expect(page).to have_no_content(@tweet1)
+      expect(page).to have_no_content(@tweet2)
     end
   end
 end
