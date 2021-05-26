@@ -123,9 +123,9 @@ RSpec.describe 'ツイート削除', type: :system do
       # ツイート1に「削除」へのリンクがあることを確認する
       expect(find('div[class="menu"]').click).to have_link '削除', href: tweet_path(@tweet1)
       # 「削除」をクリックすると確認ダイヤログが表示される
-      expect{find_link('削除', href: tweet_path(@tweet1)).click}.to change{Tweet.count}.by(0)
+      expect { find_link('削除', href: tweet_path(@tweet1)).click }.to change { Tweet.count }.by(0)
       # 確認ダイアログの内容を確認する
-      expect(page.driver.browser.switch_to.alert.text).to eq "【確認】投稿を削除してもよろしいですか？"
+      expect(page.driver.browser.switch_to.alert.text).to eq '【確認】投稿を削除してもよろしいですか？'
       # 確認ダイアログでOKを選択する
       page.driver.browser.switch_to.alert.accept
       # 削除完了画面に遷移したことを確認する
