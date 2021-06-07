@@ -1,16 +1,16 @@
-version: 2.1
-orbs:
-  ruby: circleci/ruby@0.1.2 
+version: 2.1 # circleCIのバージョン
+orbs: # jobs,commands,executorsなどの構成要素をまとめた共有可能な動作を定義
+  ruby: circleci/ruby@0.1.2 # ジョブのステップを実行する環境を定義
 
-jobs:
-  build:
-    docker:
+jobs: # 実行処理
+  build: # jobが一つの場合はbuildを記述
+    docker: # jobの一つとしてDockerのイメージ構築について記述
       - image: circleci/ruby:2.6.5-stretch-node
-    executor: ruby/default
-    steps:
-      - checkout
-      - run: gem install bundler:2.1.4
+    executor: ruby/default # 実行環境を定義する
+    steps: # 処理をキーと値を用いて設定する キーはstepの種類、値はキーに対しての処理を記述
+      - checkout # CI環境上の working_directory の値の場所にGitリポジトリをコピーする
+      - run: gem install bundler:2.1.4 #run:でgem install bundler:2.1.4を実行する
       - run:
-          name: Which bundler?
-          command: bundle -v
-      - ruby/bundle-install
+          name: Which bundler? #name:でrunコマンドに任意の名称をつけている
+          command: bundle -v #command:はrunコマンドの実態（bundle -vを実行する）
+      - ruby/bundle-install #bundle-installを実行する
